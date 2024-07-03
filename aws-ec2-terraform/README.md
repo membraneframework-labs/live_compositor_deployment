@@ -12,7 +12,7 @@ The standalone server configuration variant will just deploy an instance with an
 
 ### Example Membrane project
 
-This example is using `membrane-video-compositor-plugin` to create and interact with a Live Compositor instance. An example pipeline listens for RTMP streams, sends it to the compositor, and publishes the output as an HLS endpoint.
+This example uses `membrane-video-compositor-plugin` to create and interact with a Live Compositor instance. An example pipeline listens for RTMP streams, sends it to the compositor, and publishes the output as an HLS endpoint.
 
 After deploying this example you can:
 - Send RTMP stream to the 9000 port e.g.
