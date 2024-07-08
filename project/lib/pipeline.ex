@@ -15,11 +15,11 @@ defmodule Membrane.Demo.CompositorExample do
   @impl true
   def handle_init(_context, _opts) do
     {:ok, rtmp_pid} =
-      Membrane.RTMP.Server.start_link(%{
+      Membrane.RTMP.Server.start_link(
         handler: %RTMP.Source.ClientHandler{controlling_process: self()},
         port: 9000,
         use_ssl?: false
-      })
+      )
 
     structure = [
       child(:live_compositor, %LiveCompositor{
@@ -115,7 +115,7 @@ defmodule Membrane.Demo.CompositorExample do
 
   @impl true
   def handle_child_notification(
-        {:input_eos, Pad.ref(:video_input, pad_id), ctx},
+        {:input_eos, Pad.ref(:video_input, pad_id), _ctx},
         :live_compositor,
         _membrane_ctx,
         state

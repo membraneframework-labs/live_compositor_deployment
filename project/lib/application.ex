@@ -1,8 +1,6 @@
 defmodule CompositorExample.Application do
   use Application
 
-  alias Membrane.RTMP.Source.TcpServer
-
   @impl true
   def start(_type, _args) do
     File.mkdir_p("output")
