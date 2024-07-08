@@ -29,8 +29,7 @@ defmodule CompositorExample.MixProject do
       {:membrane_core, "~> 1.0"},
       {:membrane_rtmp_plugin, github: "membraneframework/membrane_rtmp_plugin"},
       {:membrane_http_adaptive_stream_plugin, "~> 0.18.4"},
-      {:membrane_live_compositor_plugin,
-       github: "membraneframework/membrane_live_compositor_plugin"},
+      {:membrane_live_compositor_plugin, "~> 0.9.1"},
       {:dialyxir, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
