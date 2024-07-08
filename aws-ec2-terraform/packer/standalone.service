@@ -1,0 +1,10 @@
+[Unit]
+Description=Live Compositor example
+[Service]
+Type=Simple
+RestartSec=5
+User=ubuntu
+ExecStart=/bin/bash -c /home/ubuntu/live_compositor/live_compositor
+WorkingDirectory=/home/ubuntu
+[Install]
+WantedBy=multi-user.target
